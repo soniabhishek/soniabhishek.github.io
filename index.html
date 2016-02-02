@@ -1,76 +1,28 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Semantic UI CDN</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
-</head>
-<body>
-    $('.ui.form')
-  .form({
-    fields: {
-      name: {
-        identifier: 'name',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please enter your name'
-          }
-        ]
-      },
-      skills: {
-        identifier: 'skills',
-        rules: [
-          {
-            type   : 'minCount[2]',
-            prompt : 'Please select at least two skills'
-          }
-        ]
-      },
-      gender: {
-        identifier: 'gender',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please select a gender'
-          }
-        ]
-      },
-      username: {
-        identifier: 'username',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please enter a username'
-          }
-        ]
-      },
-      password: {
-        identifier: 'password',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Please enter a password'
-          },
-          {
-            type   : 'minLength[6]',
-            prompt : 'Your password must be at least {ruleValue} characters'
-          }
-        ]
-      },
-      terms: {
-        identifier: 'terms',
-        rules: [
-          {
-            type   : 'checked',
-            prompt : 'You must agree to the terms and conditions'
-          }
-        ]
-      }
-    }
-  })
-;
-</body>
-</html>
+<style>
+    body,html {
+	background: #141415;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding:0;
+}
+.knob, .bg{
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.knob {
+	z-index: 1;
+	-webkit-animation: turn 3s linear infinite;
+}
+
+@-webkit-keyframes turn {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+</style>
+<img src="http://i.imgur.com/3FEaiiS.png" alt="" class="knob">
+<img src="http://i.imgur.com/M7f9g4a.png" class="bg">
